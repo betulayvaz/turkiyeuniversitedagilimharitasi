@@ -66,4 +66,4 @@ Proje sonunda;
 - Fare ile şehir üzerine gelindiğinde üniversite sayısı görüntülenir.
 
 ## Canlı Demo
-
+https://betulayvaz.github.io/turkiyeuniversitedagilimharitasi/
