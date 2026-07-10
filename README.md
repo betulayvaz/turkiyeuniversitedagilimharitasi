@@ -65,5 +65,5 @@ Proje sonunda;
 - İşaretçilerin renkleri üniversite sayısına göre değişir.
 - Fare ile şehir üzerine gelindiğinde üniversite sayısı görüntülenir.
 
-## Canlı Demo
+**Canlı Demo:**  
 https://betulayvaz.github.io/turkiyeuniversitedagilimharitasi/
