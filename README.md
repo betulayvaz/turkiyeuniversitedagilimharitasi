@@ -24,13 +24,13 @@ CSV formatındaki üniversite verileri okunarak şehirlere göre gruplandırılm
 turkiyeuniversiteharitasi/
 │
 ├── data/
-│   ├── universiteler.csv
+│   ├── universiteverileri.csv
 │   └── turkiye-provinces.geojson
-│
+│   ├── ilnufuslari.csv
 ├── src/
-│   └── truniversiteharitası.py
+│   └── turkiyeuniversiteharitasi.py
 │
-├── index_with_boundaries.html
+├── index.html
 ├── README.md
 ├── requirements.txt
 └── .gitignore
