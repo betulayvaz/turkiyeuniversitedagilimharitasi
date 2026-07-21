@@ -60,6 +60,7 @@ turkiyeuniversiteharitasi/
 - requirements.txt: Projede kullanılan Python kütüphanelerinin listesi.
 - .gitignore: Git tarafından takip edilmemesi gereken dosya ve klasörleri belirtir.
 - ilnufuslari.csv: Şehirlerin nüfus bilgilerini içerir.
+- v1/index.html: Haritanın ilk versiyonu.
 
 ## Çalışma Mantığı
 1. Üniversite verileri okunur.
@@ -72,7 +73,7 @@ turkiyeuniversiteharitasi/
 8. Şehirler, üniversite sayılarını temsil eden daire işaretçileri ile harita üzerinde gösterilir.
 9. Dairelerin büyüklüğü şehirde bulunan üniversite sayısına göre belirlenir.
 10. Dairelerin üzerine gelindiğinde ilgili şehrin üniversite sayısı, nüfusu ve 100.000 kişiye düşen üniversite oranı görüntülenir.
-11. Kullanıcı, Kuruluş Yılı alanına bir yıl girerek üniversiteleri kuruluş yılına göre filtreleyebilir.
+11. Kullanıcı, Kuruluş Yılı alanına bir yıl girerek üniversiteleri kuruluş yılına göre filtreleyebilir.(Filtreleme yaparken sağ taraftaki katmandan Tüm üniversiteler seçeneğini kaldırırsanız işaretciler daha belirgin olur)
 12. Filtrele butonuna tıklandığında, seçilen yıl ve öncesinde kurulmuş üniversitelere göre şehirlerdeki üniversite sayıları yeniden hesaplanır.
 13. Filtreleme sonucunda haritadaki daireler güncellenir ve ilgili şehirlerdeki filtrelenmiş üniversite sayıları gösterilir.
 14. Filtrelenmiş şehir dairelerine tıklanarak Üniversiteleri Gör bağlantısına ulaşılabilir.
