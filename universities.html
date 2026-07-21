@@ -3,16 +3,49 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Üniversiteler</title>
 </head>
 <body>
 
 <h1>Üniversiteler</h1>
 
-<div id="universityList"></div>
-<script>
-const universitiesData = [{"University Name": "Abdullah Gül Üniversitesi", "City": "Kayseri", "Establishment Year": 2010, "latitude": 38.7203, "longitude": 35.4827}, {"University Name": "Acıbadem Üniversitesi", "City": "İstanbul", "Establishment Year": 2007, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi", "City": "Adana", "Establishment Year": 2011, "latitude": 37.0, "longitude": 35.3213}, {"University Name": "Adıyaman Üniversitesi", "City": "Adıyaman", "Establishment Year": 2006, "latitude": 37.7648, "longitude": 38.2786}, {"University Name": "Afyon Kocatepe Üniversitesi", "City": "Afyonkarahisar", "Establishment Year": 1992, "latitude": 38.75, "longitude": 30.5333}, {"University Name": "Afyonkarahisar Sağlık Bilimleri Üniversitesi", "City": "Afyonkarahisar", "Establishment Year": 2018, "latitude": 38.75, "longitude": 30.5333}, {"University Name": "Ağrı İbrahim Çeçen Üniversitesi", "City": "Ağrı", "Establishment Year": 2007, "latitude": 39.7188, "longitude": 43.0526}, {"University Name": "Akdeniz Üniversitesi", "City": "Antalya", "Establishment Year": 1982, "latitude": 36.8969, "longitude": 30.7133}, {"University Name": "Aksaray Üniversitesi", "City": "Aksaray", "Establishment Year": 2006, "latitude": 38.3667, "longitude": 34.0333}, {"University Name": "Alanya Alaaddin Keykubat Üniversitesi", "City": "Antalya", "Establishment Year": 2015, "latitude": 36.8969, "longitude": 30.7133}, {"University Name": "Alanya Üniversitesi", "City": "Antalya", "Establishment Year": 2011, "latitude": 36.8969, "longitude": 30.7133}, {"University Name": "Altınbaş Üniversitesi", "City": "İstanbul", "Establishment Year": 2011, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Amasya Üniversitesi", "City": "Amasya", "Establishment Year": 2006, "latitude": 40.6558, "longitude": 35.836}, {"University Name": "Anadolu Üniversitesi", "City": "Eskişehir", "Establishment Year": 1982, "latitude": 39.7767, "longitude": 30.5206}, {"University Name": "Ankara Bilim Üniversitesi", "City": "Ankara", "Establishment Year": 2020, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Ankara Hacı Bayram Veli Üniversitesi", "City": "Ankara", "Establishment Year": 2018, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Ankara Medipol Üniversitesi", "City": "Ankara", "Establishment Year": 2018, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Ankara Müzik ve Güzel Sanatlar Üniversitesi", "City": "Ankara", "Establishment Year": 2017, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Ankara Sosyal Bilimler Üniversitesi", "City": "Ankara", "Establishment Year": 2013, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Ankara Üniversitesi", "City": "Ankara", "Establishment Year": 1946, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Ankara Yıldırım Beyazıt Üniversitesi", "City": "Ankara", "Establishment Year": 2010, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Antalya Belek Üniversitesi", "City": "Antalya", "Establishment Year": 2015, "latitude": 36.8969, "longitude": 30.7133}, {"University Name": "Antalya Bilim Üniversitesi", "City": "Antalya", "Establishment Year": 2010, "latitude": 36.8969, "longitude": 30.7133}, {"University Name": "Ardahan Üniversitesi", "City": "Ardahan", "Establishment Year": 2008, "latitude": 41.1167, "longitude": 42.8167}, {"University Name": "Artvin Çoruh Üniversitesi", "City": "Artvin", "Establishment Year": 2007, "latitude": 41.1818, "longitude": 41.8173}, {"University Name": "Ataşehir Adıgüzel Meslek Yüksekokulu", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Atatürk Üniversitesi", "City": "Erzurum", "Establishment Year": 1957, "latitude": 39.9, "longitude": 41.27}, {"University Name": "Atılım Üniversitesi", "City": "Ankara", "Establishment Year": 1997, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Avrasya Üniversitesi", "City": "Trabzon", "Establishment Year": 2010, "latitude": 41.0, "longitude": 39.7333}, {"University Name": "Aydın Adnan Menderes Üniversitesi", "City": "Aydın", "Establishment Year": 1992, "latitude": 37.8466, "longitude": 27.8452}, {"University Name": "Bahçeşehir Üniversitesi", "City": "İstanbul", "Establishment Year": 1998, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Balıkesir Üniversitesi", "City": "Balıkesir", "Establishment Year": 1992, "latitude": 39.6483, "longitude": 27.8906}, {"University Name": "Bandırma Onyedi Eylül Üniversitesi", "City": "Balıkesir", "Establishment Year": 2015, "latitude": 39.6483, "longitude": 27.8906}, {"University Name": "Bartın Üniversitesi", "City": "Bartın", "Establishment Year": 2008, "latitude": 41.5833, "longitude": 32.3333}, {"University Name": "Başkent Üniversitesi", "City": "Ankara", "Establishment Year": 1994, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Batman Üniversitesi", "City": "Batman", "Establishment Year": 2007, "latitude": 37.89, "longitude": 41.13}, {"University Name": "Bayburt Üniversitesi", "City": "Bayburt", "Establishment Year": 2008, "latitude": 40.25, "longitude": 40.25}, {"University Name": "Beykoz Üniversitesi", "City": "İstanbul", "Establishment Year": 2008, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Bezmialem Vakıf Üniversitesi", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Bilecik Şeyh Edebali Üniversitesi", "City": "Bilecik", "Establishment Year": 2007, "latitude": 40.1437, "longitude": 29.988}, {"University Name": "Bingöl Üniversitesi", "City": "Bingöl", "Establishment Year": 2007, "latitude": 38.8953, "longitude": 40.4907}, {"University Name": "Biruni Üniversitesi", "City": "İstanbul", "Establishment Year": 2014, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Bitlis Eren Üniversitesi", "City": "Bitlis", "Establishment Year": 2007, "latitude": 38.4057, "longitude": 42.1009}, {"University Name": "Boğaziçi Üniversitesi", "City": "İstanbul", "Establishment Year": 1971, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Bolu Abant İzzet Baysal Üniversitesi", "City": "Bolu", "Establishment Year": 1992, "latitude": 40.7303, "longitude": 31.6095}, {"University Name": "Burdur Mehmet Akif Ersoy Üniversitesi", "City": "Burdur", "Establishment Year": 2006, "latitude": 37.7202, "longitude": 30.2917}, {"University Name": "Bursa Teknik Üniversitesi", "City": "Bursa", "Establishment Year": 2010, "latitude": 40.1829, "longitude": 29.0736}, {"University Name": "Bursa Uludağ Üniversitesi", "City": "Bursa", "Establishment Year": 1975, "latitude": 40.1829, "longitude": 29.0736}, {"University Name": "Çağ Üniversitesi", "City": "Mersin", "Establishment Year": 1997, "latitude": 36.8121, "longitude": 34.6415}, {"University Name": "Çanakkale Onsekiz Mart Üniversitesi", "City": "Çanakkale", "Establishment Year": 1992, "latitude": 40.15, "longitude": 26.4167}, {"University Name": "Çankaya Üniversitesi", "City": "Ankara", "Establishment Year": 1997, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Çankırı Karatekin Üniversitesi", "City": "Çankırı", "Establishment Year": 2007, "latitude": 40.6053, "longitude": 33.619}, {"University Name": "Çukurova Üniversitesi", "City": "Adana", "Establishment Year": 1973, "latitude": 37.0, "longitude": 35.3213}, {"University Name": "Demiroğlu Bilim Üniversitesi", "City": "İstanbul", "Establishment Year": 2006, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Dicle Üniversitesi", "City": "Diyarbakır", "Establishment Year": 1973, "latitude": 37.91, "longitude": 40.2336}, {"University Name": "Doğuş Üniversitesi", "City": "İstanbul", "Establishment Year": 1997, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Dokuz Eylül Üniversitesi", "City": "İzmir", "Establishment Year": 1982, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "Düzce Üniversitesi", "City": "Düzce", "Establishment Year": 2006, "latitude": 40.8333, "longitude": 31.1667}, {"University Name": "Ege Üniversitesi", "City": "İzmir", "Establishment Year": 1955, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "Erciyes Üniversitesi", "City": "Kayseri", "Establishment Year": 1978, "latitude": 38.7203, "longitude": 35.4827}, {"University Name": "Erzincan Binali Yıldırım Üniversitesi", "City": "Erzincan", "Establishment Year": 2006, "latitude": 39.75, "longitude": 39.5}, {"University Name": "Erzurum Teknik Üniversitesi", "City": "Erzurum", "Establishment Year": 2010, "latitude": 39.9, "longitude": 41.27}, {"University Name": "Eskişehir Osmangazi Üniversitesi", "City": "Eskişehir", "Establishment Year": 1993, "latitude": 39.7767, "longitude": 30.5206}, {"University Name": "Eskişehir Teknik Üniversitesi", "City": "Eskişehir", "Establishment Year": 2018, "latitude": 39.7767, "longitude": 30.5206}, {"University Name": "Fatih Sultan Mehmet Üniversitesi", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Fenerbahçe Üniversitesi", "City": "İstanbul", "Establishment Year": 2016, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Fırat Üniversitesi", "City": "Elazığ", "Establishment Year": 1975, "latitude": 38.6833, "longitude": 39.2294}, {"University Name": "Galatasaray Üniversitesi", "City": "İstanbul", "Establishment Year": 1992, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Gazi Üniversitesi", "City": "Ankara", "Establishment Year": 1982, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Gaziantep İslam Bilim ve Teknoloji Üniversitesi", "City": "Gaziantep", "Establishment Year": 2018, "latitude": 37.0662, "longitude": 37.3833}, {"University Name": "Gaziantep Üniversitesi", "City": "Gaziantep", "Establishment Year": 1987, "latitude": 37.0662, "longitude": 37.3833}, {"University Name": "Gebze Teknik Üniversitesi", "City": "Kocaeli", "Establishment Year": 2014, "latitude": 40.7667, "longitude": 29.9167}, {"University Name": "Giresun Üniversitesi", "City": "Giresun", "Establishment Year": 2006, "latitude": 40.9167, "longitude": 38.3833}, {"University Name": "Gümüşhane Üniversitesi", "City": "Gümüşhane", "Establishment Year": 2008, "latitude": 40.46, "longitude": 39.48}, {"University Name": "Hacettepe Üniversitesi", "City": "Ankara", "Establishment Year": 1967, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Hakkari Üniversitesi", "City": "Hakkari", "Establishment Year": 2008, "latitude": 37.5833, "longitude": 43.7333}, {"University Name": "Haliç Üniversitesi", "City": "İstanbul", "Establishment Year": 1998, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Harran Üniversitesi", "City": "Şanlıurfa", "Establishment Year": 1992, "latitude": 37.1652, "longitude": 38.7915}, {"University Name": "Hasan Kalyoncu Üniversitesi", "City": "Gaziantep", "Establishment Year": 2008, "latitude": 37.0662, "longitude": 37.3833}, {"University Name": "Hatay Mustafa Kemal Üniversitesi", "City": "Hatay", "Establishment Year": 1992, "latitude": 36.2, "longitude": 36.1667}, {"University Name": "Hitit Üniversitesi", "City": "Çorum", "Establishment Year": 2006, "latitude": 40.5471, "longitude": 34.9547}, {"University Name": "Iğdır Üniversitesi", "City": "Iğdır", "Establishment Year": 2008, "latitude": 39.9167, "longitude": 44.0333}, {"University Name": "Isparta Uygulamalı Bilimler Üniversitesi", "City": "Isparta", "Establishment Year": 2018, "latitude": 37.7667, "longitude": 30.55}, {"University Name": "Işık Üniversitesi", "City": "İstanbul", "Establishment Year": 1996, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İbn Haldun Üniversitesi", "City": "İstanbul", "Establishment Year": 2015, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İhsan Doğramacı Bilkent Üniversitesi", "City": "Ankara", "Establishment Year": 1984, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "İnönü Üniversitesi", "City": "Malatya", "Establishment Year": 1975, "latitude": 38.355, "longitude": 38.335}, {"University Name": "İskenderun Teknik Üniversitesi", "City": "Hatay", "Establishment Year": 2015, "latitude": 36.2, "longitude": 36.1667}, {"University Name": "İstanbul 29 Mayıs Üniversitesi", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Arel Üniversitesi", "City": "İstanbul", "Establishment Year": 2007, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Atlas Üniversitesi", "City": "İstanbul", "Establishment Year": 2018, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Aydın Üniversitesi", "City": "İstanbul", "Establishment Year": 2007, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Beykent Üniversitesi", "City": "İstanbul", "Establishment Year": 1997, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Bilgi Üniversitesi", "City": "İstanbul", "Establishment Year": 1996, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Esenyurt Üniversitesi", "City": "İstanbul", "Establishment Year": 2013, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Galata Üniversitesi", "City": "İstanbul", "Establishment Year": 2019, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Gedik Üniversitesi", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Gelişim Üniversitesi", "City": "İstanbul", "Establishment Year": 2011, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Kent Üniversitesi", "City": "İstanbul", "Establishment Year": 2016, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Kültür Üniversitesi", "City": "İstanbul", "Establishment Year": 1997, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Medeniyet Üniversitesi", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Medipol Üniversitesi", "City": "İstanbul", "Establishment Year": 2009, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Nişantaşı Üniversitesi", "City": "İstanbul", "Establishment Year": 2009, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Okan Üniversitesi", "City": "İstanbul", "Establishment Year": 1999, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Rumeli Üniversitesi", "City": "İstanbul", "Establishment Year": 2015, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Sabahattin Zaim Üniversitesi", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Sağlık ve Sosyal Bilimler Meslek Yüksekokulu", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Sağlık ve Teknoloji Üniversitesi", "City": "İstanbul", "Establishment Year": 2018, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Şişli Meslek Yüksekokulu", "City": "İstanbul", "Establishment Year": 2012, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Teknik Üniversitesi", "City": "İstanbul", "Establishment Year": 1944, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Ticaret Üniversitesi", "City": "İstanbul", "Establishment Year": 2001, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Topkapı Üniversitesi", "City": "İstanbul", "Establishment Year": 2016, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Üniversitesi", "City": "İstanbul", "Establishment Year": 1933, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Üniversitesi-Cerrahpaşa", "City": "İstanbul", "Establishment Year": 2018, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstanbul Yeni Yüzyıl Üniversitesi", "City": "İstanbul", "Establishment Year": 2009, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İstinye Üniversitesi", "City": "İstanbul", "Establishment Year": 2015, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "İzmir Bakırçay Üniversitesi", "City": "İzmir", "Establishment Year": 2016, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "İzmir Demokrasi Üniversitesi", "City": "İzmir", "Establishment Year": 2016, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "İzmir Ekonomi Üniversitesi", "City": "İzmir", "Establishment Year": 2001, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "İzmir Katip Çelebi Üniversitesi", "City": "İzmir", "Establishment Year": 2010, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "İzmir Kavram Meslek Yüksekokulu", "City": "İzmir", "Establishment Year": 2008, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "İzmir Tınaztepe Üniversitesi", "City": "İzmir", "Establishment Year": 2018, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "İzmir Yüksek Teknoloji Enstitüsü", "City": "İzmir", "Establishment Year": 1992, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "Kadir Has Üniversitesi", "City": "İstanbul", "Establishment Year": 1997, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Kafkas Üniversitesi", "City": "Kars", "Establishment Year": 1992, "latitude": 40.6, "longitude": 43.1}, {"University Name": "Kahramanmaraş İstiklal Üniversitesi", "City": "Kahramanmaraş", "Establishment Year": 2018, "latitude": 37.5852, "longitude": 36.9382}, {"University Name": "Kahramanmaraş Sütçüimam Üniversitesi", "City": "Kahramanmaraş", "Establishment Year": 1992, "latitude": 37.5852, "longitude": 36.9382}, {"University Name": "Kapadokya Üniversitesi", "City": "Nevşehir", "Establishment Year": 2017, "latitude": 38.62, "longitude": 34.71}, {"University Name": "Karabük Üniversitesi", "City": "Karabük", "Establishment Year": 2007, "latitude": 41.2, "longitude": 32.6167}, {"University Name": "Karadeniz Teknik Üniversitesi", "City": "Trabzon", "Establishment Year": 1955, "latitude": 41.0, "longitude": 39.7333}, {"University Name": "Karamanoğlu Mehmetbey Üniversitesi", "City": "Karaman", "Establishment Year": 2007, "latitude": 37.1833, "longitude": 33.2167}, {"University Name": "Kastamonu Üniversitesi", "City": "Kastamonu", "Establishment Year": 2006, "latitude": 41.3833, "longitude": 33.7833}, {"University Name": "Kayseri Üniversitesi", "City": "Kayseri", "Establishment Year": 2018, "latitude": 38.7203, "longitude": 35.4827}, {"University Name": "Kırıkkale Üniversitesi", "City": "Kırıkkale", "Establishment Year": 1992, "latitude": 39.85, "longitude": 33.5167}, {"University Name": "Kırklareli Üniversitesi", "City": "Kırklareli", "Establishment Year": 2007, "latitude": 41.7667, "longitude": 27.2333}, {"University Name": "Kilis 7 Aralık Üniversitesi", "City": "Kilis", "Establishment Year": 2007, "latitude": 36.7, "longitude": 37.1167}, {"University Name": "Kocaeli Sağlık ve Teknoloji Üniversitesi", "City": "Kocaeli", "Establishment Year": 2020, "latitude": 40.7667, "longitude": 29.9167}, {"University Name": "Kırşehir Ahi Evran Üniversitesi", "City": "Kırşehir", "Establishment Year": 2006, "latitude": 39.15, "longitude": 34.1667}, {"University Name": "Kocaeli Üniversitesi", "City": "Kocaeli", "Establishment Year": 1992, "latitude": 40.7667, "longitude": 29.9167}, {"University Name": "Koç Üniversitesi", "City": "İstanbul", "Establishment Year": 1993, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Konya Gıda ve Tarım Üniversitesi", "City": "Konya", "Establishment Year": 2013, "latitude": 37.8746, "longitude": 32.4932}, {"University Name": "Konya Teknik Üniversitesi", "City": "Konya", "Establishment Year": 2018, "latitude": 37.8746, "longitude": 32.4932}, {"University Name": "KTO Karatay Üniversitesi", "City": "Konya", "Establishment Year": 2009, "latitude": 37.8746, "longitude": 32.4932}, {"University Name": "Kütahya Dumlupınar Üniversitesi", "City": "Kütahya", "Establishment Year": 1992, "latitude": 39.42, "longitude": 29.98}, {"University Name": "Kütahya Sağlık Bilimleri Üniversitesi", "City": "Kütahya", "Establishment Year": 2018, "latitude": 39.42, "longitude": 29.98}, {"University Name": "Lokman Hekim Üniversitesi", "City": "Ankara", "Establishment Year": 2018, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Malatya Turgut Özal Üniversitesi", "City": "Malatya", "Establishment Year": 2018, "latitude": 38.355, "longitude": 38.335}, {"University Name": "Maltepe Üniversitesi", "City": "İstanbul", "Establishment Year": 1997, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Manisa Celal Bayar Üniversitesi", "City": "Manisa", "Establishment Year": 1992, "latitude": 38.6191, "longitude": 27.4208}, {"University Name": "Mardin Artuklu Üniversitesi", "City": "Mardin", "Establishment Year": 2007, "latitude": 37.31, "longitude": 40.73}, {"University Name": "Marmara Üniversitesi", "City": "İstanbul", "Establishment Year": 1982, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "MEF Üniversitesi", "City": "İstanbul", "Establishment Year": 2012, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Mersin Üniversitesi", "City": "Mersin", "Establishment Year": 1992, "latitude": 36.8121, "longitude": 34.6415}, {"University Name": "Mimar Sinan Güzel Sanatlar Üniversitesi", "City": "İstanbul", "Establishment Year": 1982, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Mudanya Üniversitesi", "City": "Bursa", "Establishment Year": 2022, "latitude": 40.1829, "longitude": 29.0736}, {"University Name": "Muğla Sıtkı Koçman Üniversitesi", "City": "Muğla", "Establishment Year": 1992, "latitude": 37.2144, "longitude": 28.3636}, {"University Name": "Munzur Üniversitesi", "City": "Tunceli", "Establishment Year": 2008, "latitude": 39.1, "longitude": 39.55}, {"University Name": "Muş Alparslan Üniversitesi", "City": "Muş", "Establishment Year": 2007, "latitude": 38.9461, "longitude": 41.4883}, {"University Name": "Necmettin Erbakan Üniversitesi", "City": "Konya", "Establishment Year": 2010, "latitude": 37.8746, "longitude": 32.4932}, {"University Name": "Nevşehir Hacı Bektaş Veli Üniversitesi", "City": "Nevşehir", "Establishment Year": 2007, "latitude": 38.62, "longitude": 34.71}, {"University Name": "Niğde Ömer Halisdemir Üniversitesi", "City": "Niğde", "Establishment Year": 1992, "latitude": 37.95, "longitude": 34.6667}, {"University Name": "Nuh Naci Yazgan Üniversitesi", "City": "Kayseri", "Establishment Year": 2009, "latitude": 38.7203, "longitude": 35.4827}, {"University Name": "Ondokuz Mayıs Üniversitesi", "City": "Samsun", "Establishment Year": 1975, "latitude": 41.2867, "longitude": 36.3313}, {"University Name": "Ordu Üniversitesi", "City": "Ordu", "Establishment Year": 2006, "latitude": 40.9856, "longitude": 37.8797}, {"University Name": "Orta Doğu Teknik Üniversitesi", "City": "Ankara", "Establishment Year": 1959, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Osmaniye Korkut Ata Üniversitesi", "City": "Osmaniye", "Establishment Year": 2007, "latitude": 37.2167, "longitude": 36.2167}, {"University Name": "Ostim Teknik Üniversitesi", "City": "Ankara", "Establishment Year": 2017, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Özyeğin Üniversitesi", "City": "İstanbul", "Establishment Year": 2007, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Pamukkale Üniversitesi", "City": "Denizli", "Establishment Year": 1992, "latitude": 37.7765, "longitude": 29.0864}, {"University Name": "Piri Reis Üniversitesi", "City": "İstanbul", "Establishment Year": 2008, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Recep Tayyip Erdoğan Üniversitesi", "City": "Rize", "Establishment Year": 2006, "latitude": 41.02, "longitude": 40.52}, {"University Name": "Sabancı Üniversitesi", "City": "İstanbul", "Establishment Year": 1996, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Sağlık Bilimleri Üniversitesi", "City": "İstanbul", "Establishment Year": 2015, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Sakarya Uygulamalı Bilimler Üniversitesi", "City": "Sakarya", "Establishment Year": 2018, "latitude": 40.7833, "longitude": 30.4}, {"University Name": "Sakarya Üniversitesi", "City": "Sakarya", "Establishment Year": 1992, "latitude": 40.7833, "longitude": 30.4}, {"University Name": "Samsun Üniversitesi", "City": "Samsun", "Establishment Year": 2018, "latitude": 41.2867, "longitude": 36.3313}, {"University Name": "Sanko Üniversitesi", "City": "Gaziantep", "Establishment Year": 2013, "latitude": 37.0662, "longitude": 37.3833}, {"University Name": "Selçuk Üniversitesi", "City": "Konya", "Establishment Year": 1975, "latitude": 37.8746, "longitude": 32.4932}, {"University Name": "Siirt Üniversitesi", "City": "Siirt", "Establishment Year": 2007, "latitude": 37.93, "longitude": 41.95}, {"University Name": "Sinop Üniversitesi", "City": "Sinop", "Establishment Year": 2007, "latitude": 42.0264, "longitude": 35.15}, {"University Name": "Sivas Bilim ve Teknoloji Üniversitesi", "City": "Sivas", "Establishment Year": 2018, "latitude": 39.7461, "longitude": 37.0183}, {"University Name": "Sivas Cumhuriyet Üniversitesi", "City": "Sivas", "Establishment Year": 1974, "latitude": 39.7461, "longitude": 37.0183}, {"University Name": "Süleyman Demirel Üniversitesi", "City": "Isparta", "Establishment Year": 1992, "latitude": 37.7667, "longitude": 30.55}, {"University Name": "Şırnak Üniversitesi", "City": "Şırnak", "Establishment Year": 2008, "latitude": 37.5167, "longitude": 42.4667}, {"University Name": "Tarsus Üniversitesi", "City": "Mersin", "Establishment Year": 2018, "latitude": 36.8121, "longitude": 34.6415}, {"University Name": "TED Üniversitesi", "City": "Ankara", "Establishment Year": 2009, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Tekirdağ Namık Kemal Üniversitesi", "City": "Tekirdağ", "Establishment Year": 2006, "latitude": 40.9833, "longitude": 27.5167}, {"University Name": "TOBB Ekonomi ve Teknoloji Üniversitesi", "City": "Ankara", "Establishment Year": 2003, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Tokat Gaziosmanpaşa Üniversitesi", "City": "Tokat", "Establishment Year": 1992, "latitude": 40.3167, "longitude": 36.55}, {"University Name": "Toros Üniversitesi", "City": "Mersin", "Establishment Year": 2009, "latitude": 36.8121, "longitude": 34.6415}, {"University Name": "Trabzon Üniversitesi", "City": "Trabzon", "Establishment Year": 2018, "latitude": 41.0, "longitude": 39.7333}, {"University Name": "Trakya Üniversitesi", "City": "Edirne", "Establishment Year": 1982, "latitude": 41.67, "longitude": 26.56}, {"University Name": "Türk -Alman Üniversitesi", "City": "İstanbul", "Establishment Year": 2010, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Türk Hava Kurumu Üniversitesi", "City": "Ankara", "Establishment Year": 2011, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Türkiye Uluslarası İslam, Bilim ve Teknoloji Üniversitesi", "City": "İstanbul", "Establishment Year": 2015, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Ufuk Üniversitesi", "City": "Ankara", "Establishment Year": 1999, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Uşak Üniversitesi", "City": "Uşak", "Establishment Year": 2006, "latitude": 38.675, "longitude": 29.4}, {"University Name": "Üsküdar Üniversitesi", "City": "İstanbul", "Establishment Year": 2011, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Van Yüzüncü Yıl Üniversitesi", "City": "Van", "Establishment Year": 1982, "latitude": 38.49, "longitude": 43.38}, {"University Name": "Yalova Üniversitesi", "City": "Yalova", "Establishment Year": 2008, "latitude": 40.6667, "longitude": 29.2667}, {"University Name": "Yaşar Üniversitesi", "City": "İzmir", "Establishment Year": 2001, "latitude": 38.4237, "longitude": 27.1428}, {"University Name": "Yeditepe Üniversitesi", "City": "İstanbul", "Establishment Year": 1996, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Yıldız Teknik Üniversitesi", "City": "İstanbul", "Establishment Year": 1982, "latitude": 41.0082, "longitude": 28.9784}, {"University Name": "Yozgat Bozok Üniversitesi", "City": "Yozgat", "Establishment Year": 2006, "latitude": 39.8167, "longitude": 34.8}, {"University Name": "Yüksek İhtisas Üniversitesi", "City": "Ankara", "Establishment Year": 2013, "latitude": 39.9334, "longitude": 32.8597}, {"University Name": "Zonguldak Bülent Ecevit Üniversitesi", "City": "Zonguldak", "Establishment Year": 1992, "latitude": 41.45, "longitude": 31.7833}];
+<div id="universityList">
+    Üniversiteler yükleniyor...
+</div>
 
+<script type="module">
+
+import { initializeApp } 
+    from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import { 
+    getFirestore, 
+    collection, 
+    getDocs 
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+
+// Firebase yapılandırması
+const firebaseConfig = {
+    apiKey: "AIzaSyCoyFzIDNQEs9UHg4YrOdJdm55rRjKJCFs",
+    authDomain: "turkiye-universite-haritasi.firebaseapp.com",
+    projectId: "turkiye-universite-haritasi",
+    storageBucket: "turkiye-universite-haritasi.firebasestorage.app",
+    messagingSenderId: "448722620928",
+    appId: "1:448722620928:web:72c8417fb4c6f55fd87ee5",
+    measurementId: "G-H63J9HP38L"
+};
+
+
+// Firebase'i başlat
+const app = initializeApp(firebaseConfig);
+
+// Firestore bağlantısı
+const db = getFirestore(app);
+
+
+// URL parametrelerini al
 const params = new URLSearchParams(window.location.search);
 
 const city = params.get("city");
@@ -21,26 +54,97 @@ const year = parseInt(params.get("year"));
 console.log("SEÇİLEN ŞEHİR:", city);
 console.log("SEÇİLEN YIL:", year);
 
-const filteredUniversities = universitiesData.filter(function(university) {
-    return university["City"] === city &&
-           university["Establishment Year"] <= year;
-});
 
-console.log("FİLTRELENEN ÜNİVERSİTELER:", filteredUniversities);
+// Firebase'den üniversiteleri çek
+async function getUniversities() {
 
-console.log("ÜNİVERSİTE SAYISI:", filteredUniversities.length);
+    try {
 
-let html = "<h2>" + city + "</h2>";
+        const querySnapshot = await getDocs(
+            collection(db, "universities")
+        );
 
-html += "<ul>";
+        const universitiesData = [];
 
-filteredUniversities.forEach(function(university) {
-    html += "<li>" + university["University Name"] + "</li>";
-});
+        querySnapshot.forEach((doc) => {
 
-html += "</ul>";
+            universitiesData.push(doc.data());
 
-document.getElementById("universityList").innerHTML = html;
+        });
+
+        console.log(
+            "FIREBASE'DEN GELEN ÜNİVERSİTELER:",
+            universitiesData
+        );
+
+
+        // Filtreleme
+        const filteredUniversities = universitiesData.filter(
+            function(university) {
+
+                return university["City"] === city &&
+                       university["Establishment Year"] <= year;
+
+            }
+        );
+
+
+        console.log(
+            "FİLTRELENEN ÜNİVERSİTELER:",
+            filteredUniversities
+        );
+
+        console.log(
+            "ÜNİVERSİTE SAYISI:",
+            filteredUniversities.length
+        );
+
+
+        // HTML oluştur
+        let html = "<h2>" + city + "</h2>";
+
+        html += "<ul>";
+
+
+        filteredUniversities.forEach(
+            function(university) {
+
+                html += 
+                    "<li>" + 
+                    university["University Name"] + 
+                    "</li>";
+
+            }
+        );
+
+
+        html += "</ul>";
+
+
+        document.getElementById(
+            "universityList"
+        ).innerHTML = html;
+
+
+    } catch (error) {
+
+        console.error(
+            "Firebase verileri alınırken hata oluştu:",
+            error
+        );
+
+        document.getElementById(
+            "universityList"
+        ).innerHTML =
+            "<p>Üniversite verileri yüklenemedi.</p>";
+
+    }
+
+}
+
+
+// Fonksiyonu çalıştır
+getUniversities();
 
 </script>
 
